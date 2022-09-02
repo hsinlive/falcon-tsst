@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import styles from '../../styles/App.module.css'
 import NavigationBar from './NavigationBar'
@@ -57,7 +57,16 @@ const NewsContent = ({ source }) => {
 
 export default function App() {
   const { query } = useRouter()
-  const source = query?.source || 'default'
+
+  const [source, setSource] = useState()
+
+  useEffect(() => {
+    const selected =
+      query?.source || sessionStorage?.getItem('selected') || 'hot'
+
+    setSource(selected)
+    sessionStorage.setItem('selected', selected)
+  }, [source])
 
   return (
     <div className={styles.container}>

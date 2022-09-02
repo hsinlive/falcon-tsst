@@ -11,7 +11,7 @@ import HomeIcon from '@mui/icons-material/Home'
 const NavigationBar = ({ source }) => {
   const sources = [
     {
-      key: 'default',
+      key: 'hot',
       name: '熱門報導',
     },
     {
