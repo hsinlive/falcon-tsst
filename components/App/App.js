@@ -13,7 +13,7 @@ export default function App() {
 
   useEffect(() => {
     const selected =
-      query?.source || sessionStorage?.getItem('selected') || 'hot'
+      query?.source || sessionStorage.getItem('selected') || 'hot'
 
     setSource(selected)
     sessionStorage.setItem('selected', selected)
@@ -24,7 +24,7 @@ export default function App() {
       <SearchBar />
       <div className={styles.main}>
         <div className={styles.nav}>
-          <NavigationBar className={styles.nav} source={source}></NavigationBar>
+          <NavigationBar source={source}></NavigationBar>
         </div>
         <div className={styles.content}>
           <NewsContent source={source} />

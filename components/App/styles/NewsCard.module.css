@@ -1,0 +1,15 @@
+.Title {
+  font-size: 1.2em;
+  height: 3.6em;
+  overflow: hidden;
+}
+
+.Description {
+  height: 3em;
+  overflow: hidden;
+}
+
+.PublishedAt {
+  margin-right: 5px;
+  float: right;
+}
