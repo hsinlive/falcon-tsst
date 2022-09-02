@@ -1,0 +1,38 @@
+.container {
+  margin: 0;
+}
+
+.title {
+  color: blue;
+}
+
+.main {
+  display: flex;
+}
+
+.nav {
+  width: 300px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  overflow: hidden;
+}
+
+.SearchBar {
+  margin: 20px;
+  text-align: center;
+  display: flex;
+}
+
+.SearchBar input {
+  height: 30px;
+  border-radius: 20px;
+}
+
+.SearchIcon {
+  margin-left: -30px;
+  height: 30px;
+}
