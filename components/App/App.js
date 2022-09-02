@@ -56,7 +56,7 @@ export default function App() {
 
     setSource(selected)
     sessionStorage.setItem('selected', selected)
-  }, [source])
+  }, [query])
 
   return (
     <div className={styles.container}>
