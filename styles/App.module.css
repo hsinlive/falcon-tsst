@@ -15,8 +15,7 @@
 }
 
 .content {
-  display: flex;
-  flex-wrap: wrap;
+  padding: 5px;
   flex: 1;
-  overflow: hidden;
+  border-left: 1px solid gainsboro;
 }
