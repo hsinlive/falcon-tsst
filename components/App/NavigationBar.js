@@ -8,6 +8,8 @@ import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
 import HomeIcon from '@mui/icons-material/Home'
 
+import styles from './styles/NavigationBar.module.css'
+
 const NavigationBar = ({ source }) => {
   const sources = [
     {
@@ -45,12 +47,12 @@ const NavigationBar = ({ source }) => {
   ]
 
   return (
-    <Box sx={{ width: '100%', maxWidth: 360 }}>
+    <Box className={styles.Nav}>
       <nav>
         <List>
           {sources.map((val) => {
             return (
-              <ListItem disablePadding>
+              <ListItem className={styles.ListItem} disablePadding>
                 <Link href={`/${val.name}`}>
                   <ListItemButton
                     {...(source === val.name ? { selected: true } : {})}
@@ -58,7 +60,10 @@ const NavigationBar = ({ source }) => {
                     <ListItemIcon>
                       <HomeIcon />
                     </ListItemIcon>
-                    <ListItemText primary={val.name} />
+                    <ListItemText
+                      className={styles.ListItemText}
+                      primary={val.name}
+                    />
                   </ListItemButton>
                 </Link>
               </ListItem>

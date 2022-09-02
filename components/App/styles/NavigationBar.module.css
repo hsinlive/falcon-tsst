@@ -1,0 +1,17 @@
+.Nav {
+  width: 200px;
+}
+
+.ListItem {
+  height: 40px;
+}
+
+@media screen and (max-width: 950px) {
+  .Nav {
+    width: 50px;
+  }
+
+  .ListItemText {
+    display: none;
+  }
+}
