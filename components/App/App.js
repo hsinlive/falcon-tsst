@@ -13,10 +13,10 @@ export default function App() {
 
   useEffect(() => {
     const selected =
-      query?.source || sessionStorage.getItem('selected') || 'hot'
+      query?.source || localStorage.getItem('selected') || '熱門報導'
 
     setSource(selected)
-    sessionStorage.setItem('selected', selected)
+    localStorage.setItem('selected', selected)
   }, [query])
 
   return (
