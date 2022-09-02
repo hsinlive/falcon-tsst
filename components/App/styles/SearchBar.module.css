@@ -1,0 +1,23 @@
+.SearchBar {
+  margin: 20px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.SearchLogo {
+  margin-right: 10px;
+  height: 15px;
+}
+
+.SearchBar input {
+  width: 400px;
+  height: 40px;
+  border: 2px solid gainsboro;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px gainsboro;
+}
+
+.SearchIcon {
+  margin-left: -35px;
+  height: 40px;
+}

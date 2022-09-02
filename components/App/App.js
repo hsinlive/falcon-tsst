@@ -1,22 +1,12 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import styles from '../../styles/App.module.css'
+import SearchBar from './SearchBar'
 import NavigationBar from './NavigationBar'
 import NewsCard from './NewsCard'
 
-import SearchIcon from '@mui/icons-material/Search'
-
 import useSWR from 'swr'
 import axios from 'axios'
-
-const SearchBar = () => {
-  return (
-    <div className={styles.SearchBar}>
-      <input type="text" value="" />{' '}
-      <SearchIcon className={styles.SearchIcon} />
-    </div>
-  )
-}
 
 const useNews = (params) => {
   const URL = 'https://newsapi.org/v2/top-headlines'
@@ -52,7 +42,7 @@ const NewsContent = ({ source }) => {
 
   const { articles } = data.data
 
-  return articles.map((article, key) => <NewsCard news={article} />)
+  return articles.map((article) => <NewsCard news={article} />)
 }
 
 export default function App() {
@@ -70,7 +60,7 @@ export default function App() {
 
   return (
     <div className={styles.container}>
-      <SearchBar onSearch={() => {}}></SearchBar>
+      <SearchBar></SearchBar>
       <div className={styles.main}>
         <div className={styles.nav}>
           <NavigationBar className={styles.nav} source={source}></NavigationBar>
