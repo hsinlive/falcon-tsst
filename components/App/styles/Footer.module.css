@@ -1,9 +1,7 @@
 .Footer {
-  margin: 0;
   padding: 0 20px;
   display: inline-flex;
   width: 100%;
-  list-style: none;
   color: gray;
   background-color: white;
 }
