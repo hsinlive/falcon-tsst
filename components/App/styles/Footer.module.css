@@ -1,0 +1,17 @@
+.Footer {
+  margin: 0;
+  padding: 0 20px;
+  display: inline-flex;
+  width: 100%;
+  list-style: none;
+  color: gray;
+  background-color: white;
+}
+
+.Footer li {
+  margin: 10px 10px;
+}
+
+.Footer li:last-child {
+  margin-left: auto;
+}

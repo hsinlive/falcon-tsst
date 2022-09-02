@@ -46,7 +46,7 @@ const NavigationBar = ({ source }) => {
 
   return (
     <Box sx={{ width: '100%', maxWidth: 360 }}>
-      <nav aria-label="main mailbox folders">
+      <nav>
         <List>
           {sources.map((val) => {
             return (

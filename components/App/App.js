@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
-import styles from '../../styles/App.module.css'
+import styles from './styles/App.module.css'
 import SearchBar from './SearchBar'
 import NavigationBar from './NavigationBar'
 import NewsContent from './NewsContent'
+import Footer from './Footer'
 
 export default function App() {
   const { query } = useRouter()
@@ -20,7 +21,7 @@ export default function App() {
 
   return (
     <div className={styles.container}>
-      <SearchBar></SearchBar>
+      <SearchBar />
       <div className={styles.main}>
         <div className={styles.nav}>
           <NavigationBar className={styles.nav} source={source}></NavigationBar>
@@ -28,6 +29,9 @@ export default function App() {
         <div className={styles.content}>
           <NewsContent source={source} />
         </div>
+      </div>
+      <div className={styles.footer}>
+        <Footer />
       </div>
     </div>
   )

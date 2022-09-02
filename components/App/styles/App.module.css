@@ -1,0 +1,22 @@
+.main {
+  display: flex;
+  border-top: 1px solid gainsboro;
+}
+
+.nav {
+  width: 200px;
+}
+
+.content {
+  padding: 5px;
+  flex: 1;
+  border-left: 1px solid gainsboro;
+}
+
+.footer {
+  z-index: 1;
+  position: sticky;
+  bottom: 0px;
+  width: 100%;
+  border-top: 1px solid gainsboro;
+}
